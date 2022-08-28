@@ -6,8 +6,15 @@
             name="viewport"
             content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
         <title>Submission Bookshelf Apps</title>
+
+        <!-- custom css -->
         <link rel="stylesheet" href="/assets/styles/style.css">
+
+        <!-- sweet alert -->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     </head>
     <body>
 
@@ -36,7 +43,7 @@
                         <label for="inputBookIsComplete">Selesai dibaca</label>
                         <input id="inputBookIsComplete" type="checkbox">
                     </div>
-                    <button id="bookSubmit" type="submit">Masukkan Buku ke rak
+                    <button id="bookSubmit" type="submit" onclick="sweetAlert()">Masukkan Buku ke rak
                         <span>Belum selesai dibaca</span></button>
                 </form>
             </section>
@@ -64,5 +71,14 @@
 </main>
 
 <script src="/assets/js/script.js"></script>
+<script>
+    function sweetAlert(event) {
+        
+        Swal.fire(
+            {position: 'center', icon: 'success', title: 'Buku berhasil ditambahkan', showConfirmButton: true, timer: 60000}
+        )
+    }
+    event.preventDefault();
+</script>
 </body>
 </html>
