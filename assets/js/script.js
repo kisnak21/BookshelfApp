@@ -275,9 +275,3 @@ window.addEventListener('load', function () {
         alert('Browser yang Anda gunakan tidak mendukung Web Storage');
     }
 });
-
-function myFunction() {
-    var x = document.getElementById("snackbar");
-    x.classList = "show";
-    setTimeout(function(){} , 1000000);
-  }
