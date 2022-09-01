@@ -79,19 +79,16 @@ function renderBuku(dataBuku) {
     belumSelesai.innerHTML = '';
     selesaiBaca.innerHTML = '';
     for (let book of dataBuku) {
-        const id = book.id;
-        const title = book.title;
-        const author = book.author;
-        const year = book.year;
-        const isComplete = book.isComplete;
+
+        const {id, title, author, year, isComplete} = book;
 
         let itemBuku = document.createElement('article');
         itemBuku
             .classList
             .add('book_item', 'select_item');
-        itemBuku.innerHTML = '<h3 name = ' + id + '>' + title + '</h3>';
-        itemBuku.innerHTML += '<p>Penulis: ' + author + '</p>';
-        itemBuku.innerHTML += '<p>Tahun Terbit: ' + year + '</p>';
+        itemBuku.innerHTML = `<h3 name = ${id}  '> ${title} </h3>`;
+        itemBuku.innerHTML += `<p>Penulis: ${author} </p>`;
+        itemBuku.innerHTML += `<p>Tahun Terbit: ${year} </p>`;
 
         //action button selesai dan hapus buku
         let actionButton = document.createElement('div');
